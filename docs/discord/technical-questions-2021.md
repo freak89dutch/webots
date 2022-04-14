@@ -15248,7 +15248,7 @@ while robot.step(timestep) != -1:
 ##### Yi Zhou 04/26/2021 15:03:55
 Thanks. I'll try😀
 
-##### Abdul Haqq 04/26/2021 17:06:15
+##### Deleted User 04/26/2021 17:06:15
 Hi there! I'm a student from New Rochelle High School in the Advanced Robotics class. While using WeBots we ran into several glitches which left me and my classmates stumped. Such examples are as followed: The robot itself glitching through the floor, the robot flinging itself while holding the ring, some portion of the robot being left behind while moving up or down on the Z-axis, and the robot falling through the floor even though physics are enabled. Some of these issues were resolved after shutting down and reopening WeBots but later persisted. If you have a fix to these problems please let me know.
 
 
@@ -15264,7 +15264,7 @@ For now, I am running the web server locally (on the same computer with the cont
 Hello, my HTML export does not contain labels created via "set\_label" method. Should it be there or is it currently not supported?
 
 ##### Luftwaffel [Moderator] 04/26/2021 22:55:08
-`@Abdul Haqq` I suggest you fix the warnings that Webots shows you.
+`@Deleted User` I suggest you fix the warnings that Webots shows you.
 
 ##### Yi Zhou 04/27/2021 06:52:21
 Hi, the camera can be enabled, but both color image and depth image cannot show, is it possible because of the kinect camera?

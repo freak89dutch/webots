@@ -3385,13 +3385,13 @@ ok i found it, but the output is really bad, i can't see anything
 ![Screenshot_from_2022-03-09_11-52-28.png](https://cdn.discordapp.com/attachments/565154703139405824/951206012642267166/Screenshot_from_2022-03-09_11-52-28.png)
 %end
 
-##### alex06228 03/10/2022 00:23:17
+##### Deleted User 6a22ba23 03/10/2022 00:23:17
 Hello, I have a pretty simple question with the installation; whenever I try to open the Webots app, it just crashes, without explanation. No error sign or anything, just crashes. Does anybody know how to fix this?
 
 ##### Mat198 03/10/2022 00:27:00
 Do you have minimum requirements? Witch SO are you using?
 
-##### alex06228 03/10/2022 00:41:23
+##### Deleted User 6a22ba23 03/10/2022 00:41:23
 
 %figure
 ![unknown.png](https://cdn.discordapp.com/attachments/565154703139405824/951278560876822558/unknown.png)
@@ -3406,7 +3406,7 @@ Do you have a graphic card? I use webots on Win10 and it's fine
 
 Type dxdiag in the windows menu to see
 
-##### alex06228 03/10/2022 00:50:41
+##### Deleted User 6a22ba23 03/10/2022 00:50:41
 I'm using Windows 10 and my graphics card is NVIDIA Quadro K1200
 
 ##### Mat198 03/10/2022 01:01:39
@@ -4623,7 +4623,7 @@ Hey all, can we change the acceleration of a Webots vehicle at each time step in
 %end
 
 
-Hi, It is waiting  to transfer to the real robot. No answer no error I am using ubuntu20 and 2022a webots
+Hi, It is waiting  to transfer to the real robot. No answer no error I am using ubuntu20 and 2022a webots do you have any idea?
 
 
 Do you have an answer. Previously many thanks
@@ -5100,4 +5100,405 @@ Could you please tell me what does
 stepsCount / loading / prePhysics / physics / postPhysics / mainRendering 
 
 mean ?
+
+
+Just to be clear, I'm talking about this
+%figure
+![unknown.png](https://cdn.discordapp.com/attachments/565154703139405824/961271632444411904/unknown.png)
+%end
+
+##### moebius 04/06/2022 19:29:10
+oh okay :/ thanks
+
+
+maybe the version mismatch is causing that problem
+
+##### DrakerDG [Moderator] 04/06/2022 19:29:55
+It is possible
+
+##### Folafoyeg 04/06/2022 20:21:47
+Hello all! Pls which moveable robot with a gripper is ready available on webots to use?
+
+##### DDaniel [Cyberbotics] 04/06/2022 21:40:39
+Here's a list of all included robots: [https://www.cyberbotics.com/doc/guide/robots](https://www.cyberbotics.com/doc/guide/robots)
+
+Youbot fits the bill, you can search for it in the samples under `file > open sample world`
+
+
+Those metrics tell you how much time you've spent loading the world, executing the physics step, generating the 3D rendering etc (what's exactly behind each is complicated and mostly for developers). I think a better question is, what are you looking for?
+
+##### Spy Guy 04/06/2022 23:21:14
+I'm trying to use Python with OpenCV using the Webots camera. When I run my code with my timestep loop like this:
+%figure
+![unknown.png](https://cdn.discordapp.com/attachments/565154703139405824/961405252672848042/unknown.png)
+%end
+
+
+It crashes with no useful error message:
+%figure
+![unknown.png](https://cdn.discordapp.com/attachments/565154703139405824/961405459326197770/unknown.png)
+%end
+
+
+Never mind, I was able to use getImage() instead, not sure why that wasn't working though
+
+##### aj2001 04/07/2022 02:15:24
+hi, i'm trying to make a robot for my engineering class and i'm having trouble with hinge joints. they always fall to gravity even if i explicitly apply force, torque, and/or velocity to them. i've also tried changing around the physics values, locking parts, etc.
+
+sometimes i get it to move but it just bounces up and down, probably because it can't fully lift, or it lifts too much and spins out of control. any help would be appreciated.
+
+here's my webots file
+> **Attachment**: [simulation.wbt](https://cdn.discordapp.com/attachments/565154703139405824/961449085276155944/simulation.wbt)
+
+
+the tutorials my professor gave us mentioned nothing about this so i would really appreciate any help
+
+##### Redeco🧸 04/07/2022 04:52:50
+Thank you, I mainly wanted to be sure if the time loding the world was "global" and not per solid or something like that
+
+##### moebius 04/07/2022 05:20:03
+how do i view more verbose webots error and warning message (basically change the log level it prints to the console), but via command line, not any gui action
+
+##### DrakerDG [Moderator] 04/07/2022 06:04:47
+Hello! I see some improvements you can make to the structure of your robot. My advice is to use bounding objects made with simple shapes like cylinders and boxes. Avoid using the original mesh of your 3D design. Additionally, your robot is of considerable dimensions, so you will need enough touch to move each part of your robot. Take a look at this example whose boundign object is made of some cylinders and boxes only.
+%figure
+![Line_Follower_Robot_V1.png](https://cdn.discordapp.com/attachments/565154703139405824/961506810152501268/Line_Follower_Robot_V1.png)
+%end
+
+##### Kuroson 04/07/2022 07:21:04
+Hello newbie at pretty much everything here.
+
+I made a 170mm diameter circle with 4mm height in Fusion360. I tried exporting this design into an STL file to be imported into Webots via the "Import 3D Model". After importing the STL file, the object appears massive.
+
+
+
+Is there a workaround for this?
+
+##### DrakerDG [Moderator] 04/07/2022 07:23:03
+You can change the scale of your solid. for example from 1 to to 0.01
+
+##### Kuroson 04/07/2022 07:23:24
+So theres no way to import the shape with correct scale?
+
+##### DDaniel [Cyberbotics] 04/07/2022 07:24:00
+when exporting it, make sure the units are in meters
+
+##### Folafoyeg 04/07/2022 07:25:06
+Thanks a lot Daniel.
+
+##### Kuroson 04/07/2022 07:27:58
+Ah yes! Thanks so much, setting a unit on the STL file solved this issue.
+
+##### moebius 04/07/2022 15:54:53
+the simulation simply stops sometimes, even though the controller is still running, and the simulation time is advancing. Any particular reason this might be happening?
+
+##### aj2001 04/08/2022 03:36:40
+ok so i'm still having issues with gravity. i've taken drake's advice and simplified my bounding objects to primitives but my motors still don't want to work
+
+
+i got one to work by making the damping value really big until gravity didn't affect it and then using a big forec multiplier
+
+
+the other one though just wants to swing around, if i do the damping trick then my robot destroys itself
+
+
+it does work with gravity off though, i tried turning physics off for it and then it wouldn't move at all even if i applied force to it
+
+
+i want the bucket on the end of the arms to rotate with a rotational motor
+%figure
+![unknown.png](https://cdn.discordapp.com/attachments/565154703139405824/961832588048236554/unknown.png)
+%end
+
+
+the entire robot works with gravity disabled. i can just disable it but i need it enabled as this is a group project and we need to test it going over bumpy surfaces
+
+##### DrakerDG [Moderator] 04/08/2022 04:45:59
+Hi!, I understand that the every cylinder like a wheel can turn to left and right or not?
+
+##### aj2001 04/08/2022 04:48:57
+there's a second motor above each wheel that rotates the wheels around the Z axis
+
+##### DrakerDG [Moderator] 04/08/2022 04:50:15
+Do you know the approximate mass of your robot in kg?
+
+##### aj2001 04/08/2022 04:51:44
+the robot is a theoretical robot we had to come up with. it doesn't have a real mass. i was using the default masses that came from the density values before but i set all the part masses to 1kg because the robot kept sinking into the floor
+
+
+it is 12kg
+
+##### DrakerDG [Moderator] 04/08/2022 04:52:58
+Ok
+
+##### aj2001 04/08/2022 04:54:06
+here is my issue
+> **Attachment**: [Screencast\_from\_04-08-2022\_125342\_AM.webm](https://cdn.discordapp.com/attachments/565154703139405824/961851410247475260/Screencast_from_04-08-2022_125342_AM.webm)
+
+##### DrakerDG [Moderator] 04/08/2022 04:58:27
+Yes, I see it.
+
+I making a clone to test the structure tree
+> **Attachment**: [simulation\_V2.mp4](https://cdn.discordapp.com/attachments/565154703139405824/961852504528801812/simulation_V2.mp4)
+
+##### aj2001 04/08/2022 04:59:00
+okay
+
+##### DrakerDG [Moderator] 04/08/2022 04:59:16
+Give me some minutes
+
+##### aj2001 04/08/2022 05:11:24
+here is my updated design if you need it, i changed the wheels so the steering mechanism moves the wheels
+> **Attachment**: [simulation.wbt](https://cdn.discordapp.com/attachments/565154703139405824/961855762676723743/simulation.wbt)
+
+##### DrakerDG [Moderator] 04/08/2022 07:10:24
+Only need a little adjust in the mass for some parts and will work well
+> **Attachment**: [simulation\_V2\_1.mp4](https://cdn.discordapp.com/attachments/565154703139405824/961885710883905636/simulation_V2_1.mp4)
+
+##### aj2001 04/08/2022 07:21:29
+awesome, thanks for the help
+
+##### DrakerDG [Moderator] 04/08/2022 07:23:28
+I found in your configuration some bounding object and physics that they not necessary
+
+
+Direction and displacement test
+> **Attachment**: [simulation\_V2\_2.mp4](https://cdn.discordapp.com/attachments/565154703139405824/961891494208348180/simulation_V2_2.mp4)
+
+##### aj2001 04/08/2022 07:41:49
+what exactly did you do the mass values?
+
+##### DrakerDG [Moderator] 04/08/2022 07:49:01
+Arm and bucket test
+> **Attachment**: [simulation\_V2\_3.mp4](https://cdn.discordapp.com/attachments/565154703139405824/961895427706335252/simulation_V2_3.mp4)
+
+
+All together
+> **Attachment**: [simulation\_V2\_4.mp4](https://cdn.discordapp.com/attachments/565154703139405824/961898859133542430/simulation_V2_4.mp4)
+
+
+Body: 10 kg
+
+Steering: 1 kg x 2
+
+Wheel: 3 kg x 2
+
+Arm: 1 kg
+
+Bucket: 1 kg
+
+
+
+Total: 20 kg  at this moment
+
+
+If the mass is defined in kg, it is necessary to set the density value to -1 and vice versa
+%figure
+![unknown.png](https://cdn.discordapp.com/attachments/565154703139405824/961910510952001576/unknown.png)
+%end
+
+##### aj2001 04/08/2022 08:53:42
+i got the arm working correctly but when i edit the bucket's physics it drags the arm down with it
+
+
+the endpoints have physics modules but the child solids do not
+
+
+or the bucket falls off
+
+
+i followed this, my bucket joint looks like joint < bucket solid < shape, and the bucket solid has physics
+
+
+the part masses are the same as you listed
+
+##### DrakerDG [Moderator] 04/08/2022 09:26:11
+
+> **Attachment**: [simulation\_V2.zip](https://cdn.discordapp.com/attachments/565154703139405824/961919882662920212/simulation_V2.zip)
+
+
+
+> **Attachment**: [simulation\_V2\_5.mp4](https://cdn.discordapp.com/attachments/565154703139405824/961920465805398016/simulation_V2_5.mp4)
+
+##### aj2001 04/08/2022 09:35:18
+thank you
+
+##### áçè 04/08/2022 09:53:25
+HELLO CAN SOMEBODY PLZ TELL ME HOW TO GIVE GEAR MOTION FOR PLANETARY GEAR AS SHOWN BELOW
+
+
+
+%figure
+![unknown.png](https://cdn.discordapp.com/attachments/565154703139405824/961926753348108318/unknown.png)
+%end
+
+
+HOW TO CONNECT THEM
+
+
+SO THAT MOVING SUN GEAR WILL MOVE PLANET GEAR
+
+
+ANYONE ?
+
+
+ALSO IN MY WEBOT THERE IS NO GEAR NODE PRESENT
+
+##### DDaniel [Cyberbotics] 04/08/2022 10:37:17
+Please stop with the caps. And yes, there's no gears like that in webots but you can model the behavior using coupled motors [https://cyberbotics.com/doc/reference/motor#coupled-motors](https://cyberbotics.com/doc/reference/motor#coupled-motors)
+
+##### áçè 04/08/2022 10:43:17
+the thing i m not seeing gear node in my webot
+%figure
+![Screenshot_2022-04-08_161251.png](https://cdn.discordapp.com/attachments/565154703139405824/961939283181207572/Screenshot_2022-04-08_161251.png)
+%end
+
+
+as u can see after garden there is no gear
+
+
+<@787796043987025941> ?
+
+##### DDaniel [Cyberbotics] 04/08/2022 11:46:31
+It's available only in R2022a, but I don't think it will work for what you're trying to do
+
+##### áçè 04/08/2022 11:55:07
+ok thank you sir
+
+##### moebius 04/09/2022 00:58:20
+is there any way to put a torsional spring in hingejoint? It looks like the suspension spring field only allows for linear springs
+
+##### MMS 04/09/2022 10:44:47
+gps: The process crashed some time after starting successfully.
+
+WARNING: 'gps' controller crashed.
+
+
+
+i m getting this
+
+##### áçè 04/10/2022 03:31:22
+i have a question in gear train mechanism how should i move my passive gear by my active gear motion .... is it done in controller ?
+
+
+plz help
+
+
+anyone?
+
+##### DrakerDG [Moderator] 04/10/2022 07:43:35
+The name of the coupled motors must use the following syntax:
+
+
+
+* Using double colon between the main name and specific name
+
+* All coupled motors must be use the same main name too
+
+
+
+Active motor name (The motor that it call from code): 
+
+motor\_X::active
+
+
+
+Pasive motor(s) name(s) (Don't need call it (they) from code):
+
+motor\_X::pasive1
+
+motor\_X::pasive2
+
+.
+
+.
+
+motor\_X::pasiveN
+
+##### áçè 04/10/2022 07:46:23
+Thanx sir
+
+##### DrakerDG [Moderator] 04/10/2022 08:01:14
+The multiplier motor must change sign between gears to obtain opposite turns.
+
+
+If use gears of different diameter, the value of the multiplier must be the necessary to obtain the relation speed needed
+
+
+
+> **Attachment**: [Planetary\_gears\_1.mp4](https://cdn.discordapp.com/attachments/565154703139405824/962624743519977492/Planetary_gears_1.mp4)
+
+
+This is basic example:
+> **Attachment**: [Planetary\_gears\_sample.zip](https://cdn.discordapp.com/attachments/565154703139405824/962625472091553792/Planetary_gears_sample.zip)
+
+
+
+> **Attachment**: [Planetary\_gears\_and\_wheels.mp4](https://cdn.discordapp.com/attachments/565154703139405824/962626896703680562/Planetary_gears_and_wheels.mp4)
+
+
+this a sample adding wheels, only
+> **Attachment**: [Planetary\_gears\_and\_wheels\_V1.zip](https://cdn.discordapp.com/attachments/565154703139405824/962627043256852550/Planetary_gears_and_wheels_V1.zip)
+
+##### Big Cheeser 04/11/2022 14:48:38
+Anyone know how to set the inertia of a propeller? Is it fast and slow helix solids or are those solids only for graphical representation?
+
+##### DrakerDG [Moderator] 04/12/2022 01:40:20
+The solid of fastHelix and slowHelix define the graphical representation according to angular velocity of motors, only I think, but I not sure
+
+##### vuwij 04/13/2022 01:34:47
+Is there any we you can run webots without the gui?
+
+
+for exmaple --no-rendering just disables the rendering without disabling the gui completely
+
+##### DrakerDG [Moderator] 04/13/2022 01:45:36
+Try setting in preferences options and check this document: [https://www.cyberbotics.com/doc/guide/preferences#opengl](https://www.cyberbotics.com/doc/guide/preferences#opengl)
+%figure
+![2022-04-12_1.png](https://cdn.discordapp.com/attachments/565154703139405824/963615913863708732/2022-04-12_1.png)
+%end
+
+##### vuwij 04/13/2022 01:48:02
+not sure which setting here you mean disable ambient occulusion completely? I want to use webots in a CI setting where there is no GUI needed
+
+##### DrakerDG [Moderator] 04/13/2022 01:49:42
+Ok
+
+##### vuwij 04/13/2022 02:01:33
+world using the web simulation streaming server help?
+
+[https://cyberbotics.com/doc/guide/web-simulation#streaming-server](https://cyberbotics.com/doc/guide/web-simulation#streaming-server)
+
+##### aysegul ucar 04/13/2022 17:19:16
+Do you have ant idea? İfconfig or another solutşon?
+
+##### AlexandrosNic 04/14/2022 08:29:12
+Is there any way to change the default joint angles of a robot when it is spawning in webots? (without having to do it through script)
+
+##### DDaniel [Cyberbotics] 04/14/2022 08:33:52
+In theory you can create the PROTO such that it exposes the joint angles as parameters. That way based on which parameters you provide, it will load in a specific configuration. In practice however most existing PROTO do not expose them. What you can still do is use the supervisor's `wb_supervisor_node_set_joint_position` ([https://cyberbotics.com/doc/reference/supervisor#wb\_supervisor\_node\_set\_joint\_position](https://cyberbotics.com/doc/reference/supervisor#wb_supervisor_node_set_joint_position))  function to set an arbitrary position from your controller as it starts
+
+##### AlexandrosNic 04/14/2022 11:30:10
+Another question. The way I create custom proto files currently is by:
+
+1. using the "Import 3D model" and importing the custom stl file I want to use,
+
+2. Saving the world, open the wbt file and identify the part I want to use
+
+3. Copy paste the part in a new file which I will save as .proto (by adding the corresponding proto definition)
+
+4. Save it in the proto folder.
+
+
+
+However when I do this (and added Physics), the objects even though they are rendered correctly, they seem to act like crazy, flying around in the scene. Does anyone know what causes this problem?
+
+##### DDaniel [Cyberbotics] 04/14/2022 11:40:14
+The importer translates what it decodes from the file in a very naive way, so often it ends up adding a lot of intermediary solids for the purpose of adding a rotation or translation. So if you go down that route, either change these intermediary solids to Transform nodes or you might need to ensure that ALL of them have a Physics node (having a mix of physical and non-physical stuff usually causes what you describe)
+
+
+Alternatively you can disable the "import as solid" option and just do the opposite of converting the transforms to solids of the nodes you care about (and adding the physics of course)
+
+##### AlexandrosNic 04/14/2022 11:52:33
+changing them to transform worked. All of them having Physics node didn't. Thank you Daniel!
 
